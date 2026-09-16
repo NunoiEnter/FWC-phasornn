@@ -1,0 +1,265 @@
+:root {
+  color: #342a45;
+  background: #f0e8f4;
+  font-family: "Avenir Next", "Trebuchet MS", sans-serif;
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  min-height: 100vh;
+  margin: 0;
+  padding: 1.5rem;
+  place-items: center;
+}
+
+::selection {
+  color: #fff;
+  background: #a84770;
+}
+
+.profile-card {
+  position: relative;
+  width: min(100%, 29rem);
+  overflow: hidden;
+  border-radius: 1rem;
+  background: #fffafd;
+  }
+
+
+.card-header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.85rem;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  color: #fff;
+  background: #514064;
+}
+
+.school-mark {
+  display: grid;
+  width: 3rem;
+  aspect-ratio: 1;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 50%;
+  place-items: center;
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.header-copy {
+  display: grid;
+  gap: 0.18rem;
+}
+
+.header-copy strong {
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+}
+
+.card-code {
+  padding: 0.34rem 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  border-radius: 0.35rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.identity {
+  display: grid;
+  grid-template-columns: 8.5rem 1fr;
+  gap: 1.35rem;
+  align-items: center;
+  padding: 1.5rem 1.5rem 1.25rem;
+}
+
+.portrait-frame {
+  padding: 0.35rem;
+  border-radius: 0.85rem;
+  background: #fff;
+  box-shadow: 0 0.7rem 1.6rem rgba(81, 64, 100, 0.14);
+  transform: rotate(-1.5deg);
+}
+
+.profile-picture {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 0.58rem;
+  object-fit: cover;
+}
+
+.identity-copy h1 {
+  margin: 0;
+  color: #3d304d;
+  font-size: clamp(1.75rem, 7vw, 2.35rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+table {
+  width: calc(100% - 3rem);
+  margin: 0 1.5rem 1.25rem;
+  border-collapse: collapse;
+  border-top: 1px solid #eadfea;
+  border-bottom: 1px solid #eadfea;
+  text-align: left;
+}
+
+th,
+td {
+  padding: 0.78rem 0;
+  vertical-align: top;
+}
+
+tr + tr th,
+tr + tr td {
+  border-top: 1px solid #f0e8f0;
+}
+
+th {
+  width: 27%;
+  color: #6f5977;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+td {
+  color: #493b56;
+  font-size: 0.88rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.social-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.65rem;
+  padding: 0 1.5rem;
+}
+
+.social-links a {
+  display: grid;
+  min-width: 0;
+  padding: 0.72rem 0.4rem;
+  border: 1px solid #e5d8e7;
+  border-radius: 0.75rem;
+  color: #514064;
+  background: #faf4f8;
+  place-items: center;
+  gap: 0.35rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 160ms ease, border-color 160ms ease, transform 160ms ease;
+}
+
+.social-links a:hover {
+  border-color: #d48aaa;
+  background: #f8e7ef;
+  transform: translateY(-0.12rem);
+}
+
+.social-links svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+
+.social-links .icon-dot {
+  fill: currentColor;
+  stroke: none;
+}
+
+.contact-button {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.9rem 1.5rem 0;
+  padding: 0.9rem 1rem;
+  border-radius: 0.75rem;
+  color: #fff;
+  background: #a84770;
+  font-size: 0.88rem;
+  font-weight: 800;
+  text-decoration: none;
+  transition: background-color 160ms ease, transform 160ms ease;
+}
+
+.contact-button:hover {
+  background: #873456;
+  transform: translateY(-0.1rem);
+}
+
+.contact-button span {
+  font-size: 1.2rem;
+}
+
+a:focus-visible {
+  outline: 0.2rem solid #96385f;
+  outline-offset: 0.18rem;
+}
+
+footer {
+  position: relative;
+  z-index: 1;
+  padding: 1rem 1.5rem 1.15rem;
+  color: #6f5977;
+  font-size: 0.66rem;
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media (max-width: 28rem) {
+  body {
+    padding: 0.8rem;
+  }
+
+  .card-header {
+    grid-template-columns: auto 1fr;
+  }
+
+  .card-code {
+    display: none;
+  }
+
+  .identity {
+    grid-template-columns: 7rem 1fr;
+    gap: 1rem;
+    padding-inline: 1.1rem;
+  }
+
+  table {
+    width: calc(100% - 2.2rem);
+    margin-inline: 1.1rem;
+  }
+
+  .social-links {
+    padding-inline: 1.1rem;
+  }
+
+  .contact-button {
+    margin-inline: 1.1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .social-links a,
+  .contact-button {
+    transition: none;
+  }
+}

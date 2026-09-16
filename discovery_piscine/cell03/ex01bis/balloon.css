@@ -1,0 +1,42 @@
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #172033;
+  background: #f4f0ea;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  min-height: 100vh;
+  margin: 0;
+  padding: 1.5rem;
+  place-items: center;
+}
+
+.panel {
+  display: grid;
+  width: min(100%, 36rem);
+  padding: 2rem;
+  place-items: center;
+  border-radius: 1.25rem;
+  background: #fff;
+  box-shadow: 0 1rem 3rem rgba(23, 32, 51, 0.14);
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+}
+
+.balloon {
+  width: 200px;
+  height: 200px;
+  margin: 1.5rem;
+  border-radius: 50%;
+  background: red;
+  cursor: pointer;
+  transition: width 120ms ease, height 120ms ease, background-color 120ms ease;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basics</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 2rem;
+      background-color: pink;
+    }
+
+    h1 {
+      color: white;
+      text-align: center;
+    }
+
+    .shops {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .shop {
+      flex: 1;
+      max-width: 32rem;
+      margin: 0;
+      text-align: center;
+    }
+
+    .shop img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .shop a {
+      display: block;
+      margin-top: 0.75rem;
+    }
+
+    footer {
+      text-align: right;
+      font-family: monospace;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <h1>Basics &amp; More</h1>
+  <div class="shops">
+    <figure class="shop">
+      <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&amp;fit=crop&amp;w=640&amp;q=80" alt="Laptop available from an online electronics shop">
+      <figcaption><a href="https://www.apple.com/shop/buy-mac">Apple Store</a></figcaption>
+    </figure>
+    <figure class="shop">
+      <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&amp;fit=crop&amp;w=640&amp;q=80" alt="Watch available from an online shop">
+      <figcaption><a href="https://www.amazon.com/">Amazon</a></figcaption>
+    </figure>
+  </div>
+  <hr>
+  <footer>&copy; NunoiEnter 2026</footer>
+</body>
+</html>

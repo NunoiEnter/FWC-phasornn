@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Player Two's visual novel themed student portfolio.">
+  <title>Player Two · Route B</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,600;6..72,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/tailwind.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="portfolio-page portfolio-page--night bg-ink text-white antialiased">
+  <a class="skip-link" href="#about">Skip to portfolio</a>
+
+  <header class="site-header" data-header>
+    <a class="site-brand" href="index.html" aria-label="Back to route selection">
+      <span class="site-brand__mark">AC</span>
+      <span>After Class</span>
+    </a>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="sr-only">Open navigation</span>
+      <span></span><span></span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Portfolio sections">
+      <a href="#about">About</a>
+      <a href="#showcase">Showcase</a>
+      <a href="#contact">Contact</a>
+      <a class="site-nav__exit" href="index.html">Change route</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="chapter-hero" aria-labelledby="hero-title">
+      <img class="chapter-hero__art" src="assets/partner-route.png" alt="Player Two represented as an anime guitarist">
+      <div class="chapter-hero__veil" aria-hidden="true"></div>
+      <div class="chapter-hero__title max-w-7xl mx-auto px-6 md:px-10">
+        <h1 id="hero-title">Player Two</h1>
+        <p>Route B · Frontend teammate</p>
+      </div>
+      <div class="chapter-dialogue max-w-5xl mx-auto">
+        <p class="chapter-dialogue__speaker">Player Two</p>
+        <p>“A good interface makes every choice feel clear. Let me show you what I bring to the team.”</p>
+        <a href="#about">Continue</a>
+      </div>
+    </section>
+
+    <section class="profile-section profile-section--paper" id="about" data-section>
+      <div class="section-layout max-w-7xl mx-auto px-6 md:px-10">
+        <div class="section-heading">
+          <h2>About me</h2>
+          <p>Chapter one</p>
+        </div>
+        <div class="about-layout">
+          <figure class="portrait-frame portrait-frame--wide">
+            <img src="assets/partner-route.png" alt="Anime avatar used for Player Two">
+            <figcaption>@partner42 · 42 student</figcaption>
+          </figure>
+          <div class="about-copy">
+            <p class="about-copy__lead">I am the second half of this two-person Rush team, learning frontend development through practical challenges.</p>
+            <p>I care about clear structure, reliable responsive behavior, and the small details that make a shared project feel consistent.</p>
+            <dl class="facts-list">
+              <div><dt>Focus</dt><dd>Frontend & collaboration</dd></div>
+              <div><dt>Learning</dt><dd>HTML, CSS, JavaScript</dd></div>
+              <div><dt>Role</dt><dd>Rush teammate</dd></div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="profile-section profile-section--dark" id="showcase" data-section>
+      <div class="section-layout max-w-7xl mx-auto px-6 md:px-10">
+        <div class="section-heading section-heading--light">
+          <h2>Showcase</h2>
+          <p>Chapter two</p>
+        </div>
+        <div class="showcase-layout">
+          <article class="feature-project">
+            <h3>Two-person Rush</h3>
+            <span class="feature-project__type">Selected project</span>
+            <p>A collaborative portfolio built around a shared concept, consistent components, and three focused pages.</p>
+            <ul class="tag-list" aria-label="Project skills">
+              <li>HTML</li><li>Tailwind CSS</li><li>Teamwork</li><li>Mobile UI</li>
+            </ul>
+          </article>
+          <div class="skill-stack" aria-label="Core skills">
+            <div><h3>Layout</h3><p>Flexible sections that stay readable from phone screens to desktops.</p></div>
+            <div><h3>Consistency</h3><p>Shared patterns that make two individual pages feel like one project.</p></div>
+            <div><h3>Teamwork</h3><p>Splitting responsibilities clearly, then checking the complete experience together.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="profile-section profile-section--contact" id="contact" data-section>
+      <div class="contact-layout max-w-7xl mx-auto px-6 md:px-10">
+        <div class="section-heading">
+          <h2>Let's connect</h2>
+          <p>Final chapter</p>
+        </div>
+        <p class="contact-intro">Replace these destinations with the second teammate's real profiles before submission.</p>
+        <div class="contact-links">
+          <a href="https://github.com/" target="_blank" rel="noopener noreferrer"><span>GitHub</span><small>Add username</small><b aria-hidden="true"></b></a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span><small>Add profile</small><b aria-hidden="true"></b></a>
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><span>Instagram</span><small>Add username</small><b aria-hidden="true"></b></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><span>After Class · Route B</span><span>© <span data-year></span> Player Two</span></footer>
+</body>
+</html>

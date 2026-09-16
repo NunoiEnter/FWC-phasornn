@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  color: #fff;
+  background: #000;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.parallax {
+  display: grid;
+  min-height: 100vh;
+  padding: 2rem;
+  place-items: center;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+.image-one {
+  background-image:
+    linear-gradient(rgba(22, 12, 34, 0.18), rgba(22, 12, 34, 0.5)),
+    url("../../../../itkmitl/42/1.png");
+}
+
+.image-two {
+  background-image:
+    linear-gradient(rgba(22, 12, 34, 0.18), rgba(22, 12, 34, 0.5)),
+    url("../../../../itkmitl/42/2.png");
+  background-attachment: scroll;
+}
+
+h1,
+h2 {
+  margin: 0;
+  padding: 1rem 1.5rem;
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  font-size: clamp(2rem, 6vw, 4.5rem);
+  letter-spacing: 0.03em;
+  text-shadow: 0 0.15rem 1rem rgba(0, 0, 0, 0.35);
+}
+
+.message-block {
+  display: grid;
+  min-height: 38vh;
+  padding: 3rem 1.5rem;
+  place-items: center;
+  background: #000;
+  text-align: center;
+}
+
+.message-block p {
+  width: min(100%, 42rem);
+  margin: 0;
+  font-size: clamp(1.3rem, 3vw, 2rem);
+  line-height: 1.5;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}

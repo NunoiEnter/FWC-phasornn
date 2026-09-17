@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A two-person visual novel portfolio for the 42 Discovery Piscine Rush.">
+  <title>RUSH PROJECT · Two Routes</title>
+  <link rel="icon" href="../nunoi/assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,600;6..72,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="main.css">
+  <script src="main.js" defer></script>
+</head>
+<body class="min-h-screen bg-[#120f20] font-[DM_Sans,sans-serif] text-white antialiased overflow-hidden max-md:overflow-auto">
+
+  <a href="#routes" class="fixed top-3 left-3 z-[100] -translate-y-[180%] bg-[#74d5c5] px-4 py-3 font-bold text-[#171326] no-underline transition-transform duration-200 focus:translate-y-0">Skip to route selection</a>
+
+  <main id="routes" class="relative isolate min-h-screen px-0 py-0 max-md:min-h-svh max-md:px-4 max-md:pt-36 max-md:pb-44">
+
+    <!-- Header -->
+    <div class="pointer-events-none absolute top-8 left-1/2 z-[5] w-[min(90vw,34rem)] -translate-x-1/2 text-center max-md:top-6">
+      <h1 class="m-0 font-[Newsreader,serif] text-[clamp(3rem,7vw,6rem)] leading-[0.95] tracking-[-0.035em] [text-shadow:0_0.35rem_1.8rem_rgba(0,0,0,0.48)] max-md:text-6xl">RUSH PROJECT</h1>
+      <p class="mt-2.5 mb-0 text-[0.72rem] font-bold tracking-[0.08em] text-[#fff2e4] [text-shadow:0_0.12rem_1rem_rgba(0,0,0,0.65)]">Choose a route to open a portfolio.</p>
+    </div>
+
+    <!-- Route cards -->
+    <div class="grid min-h-screen grid-cols-2 max-md:min-h-0 max-md:grid-cols-1 max-md:gap-3" aria-label="Choose a teammate">
+
+      <!-- Route A : Nunoi -->
+      <a href="../nunoi/nunoi.html"
+         data-dialogue-speaker="NunoiEnter"
+         data-dialogue="Life and die with unix and visual novel"
+         class="group relative block min-h-screen overflow-hidden text-white no-underline border-r border-white/35 max-md:min-h-56 max-md:border max-md:border-white/30 max-md:border-solid">
+        <img src="../nunoi/assets/nunoi-route.png" alt="Anime guitarist representing Nunoi's portfolio route"
+             class="h-full w-full object-cover object-center transition duration-700 ease-out group-hover:scale-[1.035] group-hover:saturate-[1.08] group-focus-visible:scale-[1.035] max-md:absolute max-md:inset-0 max-md:object-[50%_43%]">
+        <span aria-hidden="true" class="absolute inset-0 bg-gradient-to-b from-[#100c1c]/35 via-[#100c1c]/10 to-[#100c1c]/95"></span>
+        <span class="absolute top-8 left-8 border-b border-white/60 pb-1.5 text-xs font-bold tracking-[0.12em] uppercase max-md:top-4 max-md:left-4">Route A</span>
+        <span class="absolute right-10 bottom-44 left-10 grid gap-1 max-md:right-5 max-md:bottom-5 max-md:left-5">
+          <strong class="font-[Newsreader,serif] text-[clamp(2.7rem,5vw,5.5rem)] leading-[0.9] tracking-[-0.035em] max-md:text-[2.6rem]">Monic@</strong>
+          <small class="font-semibold text-[#fff5e8] text-[0.92rem] max-md:hidden">THE HOLY UNIX AND VN WEEB</small>
+          <span class="mt-5 inline-flex w-max items-center gap-3 border border-white/60 bg-[#140f23]/55 px-4 py-3 text-[0.82rem] font-bold transition group-hover:bg-white group-hover:text-[#171326] max-md:mt-2.5">Open chapter <span aria-hidden="true" class="inline-block h-2 w-2 rotate-45 border-t border-r border-current"></span></span>
+        </span>
+      </a>
+
+      <!-- Route B : Larper -->
+      <a href="../larper/larper.html"
+         data-dialogue-speaker="Larper"
+         data-dialogue="Least insane MacBook startup larper"
+         class="group relative block min-h-screen overflow-hidden text-white no-underline max-md:min-h-56 max-md:border max-md:border-white/30 max-md:border-solid">
+        <img src="../larper/assets/partner-route.png" alt="Anime guitarist representing the second teammate's portfolio route"
+             class="h-full w-full object-cover object-[58%_50%] transition duration-700 ease-out group-hover:scale-[1.035] group-hover:saturate-[1.08] group-focus-visible:scale-[1.035] max-md:absolute max-md:inset-0 max-md:object-[50%_30%]">
+        <span aria-hidden="true" class="absolute inset-0 bg-gradient-to-b from-[#100c1c]/35 via-[#100c1c]/10 to-[#100c1c]/95"></span>
+        <span class="absolute top-8 right-8 border-b border-white/60 pb-1.5 text-xs font-bold tracking-[0.12em] uppercase max-md:top-4 max-md:right-auto max-md:left-4">Route B</span>
+        <span class="absolute right-10 bottom-44 left-10 grid gap-1 max-md:right-5 max-md:bottom-5 max-md:left-5">
+          <strong class="font-[Newsreader,serif] text-[clamp(2.7rem,5vw,5.5rem)] leading-[0.9] tracking-[-0.035em] max-md:text-[2.6rem]">Larper</strong>
+          <small class="font-semibold text-[#fff5e8] text-[0.92rem] max-md:hidden">MACBOOK STARTUP LARPER</small>
+          <span class="mt-5 inline-flex w-max items-center gap-3 border border-white/60 bg-[#140f23]/55 px-4 py-3 text-[0.82rem] font-bold transition group-hover:bg-white group-hover:text-[#171326] max-md:mt-2.5">Open chapter <span aria-hidden="true" class="inline-block h-2 w-2 rotate-45 border-t border-r border-current"></span></span>
+        </span>
+      </a>
+    </div>
+
+    <!-- VN dialogue box -->
+    <section aria-live="polite" aria-atomic="true"
+      class="absolute bottom-6 left-1/2 z-[6] w-[min(calc(100%-3rem),58rem)] min-h-[7.7rem] -translate-x-1/2 border border-white/55 bg-[#171326]/95 py-5 pr-16 pl-6 shadow-[0_1.5rem_4rem_rgba(13,9,27,0.28)] backdrop-blur-sm before:absolute before:inset-[0.3rem] before:border before:border-white/15 before:content-[''] before:pointer-events-none max-md:fixed max-md:bottom-3 max-md:w-[calc(100%-1.5rem)] max-md:min-h-[8.5rem] max-md:p-4 max-md:pr-11">
+      <p id="dialogue-speaker" class="relative z-[1] m-0 mb-2 text-xs font-bold tracking-[0.1em] text-[#74d5c5] uppercase">Narrator</p>
+      <p id="dialogue-line" class="relative z-[1] m-0 text-[#fff9f0] text-[clamp(1rem,1.6vw,1.15rem)] leading-[1.55] max-md:text-[0.92rem]">Two teammates. One rush. Choose whose story you want to read first.</p>
+      <span aria-hidden="true" class="absolute right-[1.35rem] bottom-[1.1rem] z-[1] h-2 w-2 rotate-45 border-r-2 border-b-2 border-[#ef735d] animate-[continue-pulse_1.3s_ease-in-out_infinite]"></span>
+    </section>
+  </main>
+</body>
+</html>

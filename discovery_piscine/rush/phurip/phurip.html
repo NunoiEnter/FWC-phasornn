@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="phurip's MacBook startup phurip portfolio. Route B of the Rush Project.">
+  <title>phurip · Route B</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,600;6..72,700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="phurip.css">
+  <script src="phurip.js" defer></script>
+</head>
+<body class="bg-[#171326] font-[DM_Sans,sans-serif] text-white antialiased">
+
+  <a href="#about" class="fixed top-3 left-3 z-[100] -translate-y-[180%] bg-[#74d5c5] px-4 py-3 font-bold text-[#171326] no-underline transition-transform duration-200 focus:translate-y-0">Skip to portfolio</a>
+
+  <!-- Header -->
+  <header data-header class="fixed top-0 right-0 left-0 z-50 flex min-h-[4.5rem] items-center justify-between border-b border-white/15 bg-[#131021]/90 px-[clamp(1rem,4vw,3rem)] py-3 backdrop-blur-md">
+    <a href="../main/index.html" aria-label="Back to route selection" class="inline-flex items-center gap-3 font-[Newsreader,serif] text-lg font-bold no-underline">
+      <span class="grid aspect-square w-9 place-items-center border border-white/60 font-[DM_Sans,sans-serif] text-[0.7rem] tracking-[0.08em]">AC</span>
+      <span>RUSH PROJECT</span>
+    </a>
+    <button class="menu-button hidden h-[2.6rem] w-[2.6rem] place-content-center gap-[0.4rem] border border-white/35 bg-transparent max-md:grid" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="sr-only">Open navigation</span>
+      <span class="block h-px w-[1.15rem] bg-white"></span>
+      <span class="block h-px w-[1.15rem] bg-white"></span>
+    </button>
+    <nav id="site-nav" aria-label="Portfolio sections" class="flex items-center gap-6 max-md:absolute max-md:top-full max-md:right-0 max-md:left-0 max-md:hidden max-md:flex-col max-md:items-stretch max-md:gap-2.5 max-md:border-b max-md:border-white/15 max-md:bg-[#171326] max-md:p-5 max-md:[&.is-open]:flex">
+      <a href="#about" class="relative py-2 text-[0.86rem] font-semibold text-[#e7dfef] no-underline after:absolute after:right-0 after:bottom-0 after:left-0 after:h-px after:origin-left after:scale-x-0 after:bg-[#74d5c5] after:transition-transform after:duration-200 hover:after:scale-x-100 max-md:p-3">About</a>
+      <a href="#showcase" class="relative py-2 text-[0.86rem] font-semibold text-[#e7dfef] no-underline after:absolute after:right-0 after:bottom-0 after:left-0 after:h-px after:origin-left after:scale-x-0 after:bg-[#74d5c5] after:transition-transform after:duration-200 hover:after:scale-x-100 max-md:p-3">Showcase</a>
+      <a href="#contact" class="relative py-2 text-[0.86rem] font-semibold text-[#e7dfef] no-underline after:absolute after:right-0 after:bottom-0 after:left-0 after:h-px after:origin-left after:scale-x-0 after:bg-[#74d5c5] after:transition-transform after:duration-200 hover:after:scale-x-100 max-md:p-3">Contact</a>
+      <a href="../main/index.html" class="border border-white/40 px-3.5 py-2.5 hover:bg-[#74d5c5] hover:text-[#171326] max-md:mt-1.5 max-md:text-center">Change route</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero : boot screen -->
+    <section class="relative isolate flex min-h-svh items-end overflow-hidden" aria-labelledby="hero-title">
+      <img src="assets/phurip-route.png" alt="phurip represented as an anime founder opening a glowing MacBook" class="absolute inset-0 -z-[2] h-full w-full animate-[hero-reveal_1.1s_cubic-bezier(0.16,1,0.3,1)_both] object-cover object-[55%_50%]">
+      <div aria-hidden="true" class="absolute inset-0 -z-[1] h-full w-full bg-gradient-to-b from-[#120f20]/20 via-[#120f20]/25 to-[#120f20]/95"></div>
+      <div class="absolute right-0 bottom-[11.5rem] left-0 z-[1] mx-auto w-full max-w-7xl px-6 md:px-10 max-md:bottom-[12.5rem]">
+        <p class="mb-3 inline-flex items-center gap-2 rounded-full border border-white/30 bg-black/50 px-4 py-1.5 font-[JetBrains_Mono,monospace] text-xs text-[#74d5c5]">
+          <span class="inline-block h-2 w-2 animate-pulse rounded-full bg-[#74d5c5]"></span>
+          phuripat@macbook-pro ~ % ./raise_seed_round --vibes-only
+        </p>
+        <h1 id="hero-title" class="m-0 max-w-[9ch] font-[Newsreader,serif] text-[clamp(4rem,10vw,8.8rem)] leading-[0.82] tracking-[-0.04em] [text-shadow:0_0.45rem_2.2rem_rgba(13,9,27,0.48)] max-md:max-w-full max-md:text-[clamp(3.15rem,15.5vw,4.8rem)]">phuri__p</h1>
+        <p class="mt-3 mb-0 text-[0.78rem] font-bold tracking-[0.1em] text-[#fff4e8] uppercase">Route B · MacBook startup larper · pre-seed (of an idea)</p>
+      </div>
+      <div class="relative z-[2] mx-auto mb-6 grid w-[min(calc(100%-3rem),64rem)] grid-cols-[7rem_1fr_auto] items-center gap-4 border border-white/55 bg-[#171326]/95 p-[1.35rem_1.5rem] shadow-[0_1.5rem_4rem_rgba(13,9,27,0.28)] backdrop-blur-sm before:pointer-events-none before:absolute before:inset-[0.3rem] before:border before:border-white/15 before:content-[''] max-md:mb-3 max-md:w-[calc(100%-1.5rem)] max-md:grid-cols-[1fr_auto] max-md:p-4">
+        <p class="relative z-[1] m-0 text-xs font-bold tracking-[0.1em] text-[#74d5c5] uppercase max-md:col-span-full">phuripat</p>
+        <p class="relative z-[1] m-0 leading-[1.55] max-md:text-[0.92rem]">"I love my Macbook Pro M4 Pro, 24/512 Thunderbolt 5. That's all i need."</p>
+        <a href="#about" class="relative z-[1] inline-flex items-center gap-2 text-[0.84rem] font-bold text-[#74d5c5] no-underline">Continue <span aria-hidden="true" class="inline-block h-[0.45rem] w-[0.45rem] rotate-45 border-r border-b border-current"></span></a>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" data-section class="scroll-mt-[4.5rem] bg-[#fff8ed] text-[#332a42]">
+      <div class="mx-auto max-w-7xl px-6 py-[clamp(5rem,9vw,8rem)] md:px-10">
+        <div class="mb-[clamp(2.5rem,5vw,4.5rem)]">
+          <h2 class="m-0 font-[Newsreader,serif] text-[clamp(3.25rem,7vw,6rem)] leading-[0.9] tracking-[-0.035em]">About me</h2>
+          <p class="mt-3 mb-0 text-xs font-bold tracking-[0.12em] text-[#352d72] uppercase">Chapter one · origin story</p>
+        </div>
+        <div class="grid items-center gap-[clamp(2rem,7vw,7rem)] md:grid-cols-[minmax(15rem,0.75fr)_minmax(18rem,1.25fr)]">
+          <figure class="m-0 w-full max-w-[25rem] rotate-[1.5deg]">
+            <img src="assets/me.jpg" alt="phurip's founder-mode avatar with a glowing laptop" class="aspect-[4/5] w-full border-[0.65rem] border-[#fffdf9] object-cover object-[62%_50%] shadow-[0_1.5rem_3rem_rgba(69,47,65,0.18)]">
+            <figcaption class="mt-3.5 text-center text-[0.78rem] font-bold tracking-[0.08em] text-[#70647c] uppercase">@phurip · CEO of shipping (Claude)</figcaption>
+          </figure>
+          <div class="max-w-[44rem]">
+            <p class="mt-0 font-[Newsreader,serif] text-[clamp(1.7rem,3vw,2.5rem)] leading-[1.2] font-semibold text-[#332a42]">
+              Professional Shipper and larper. Part-time founder, shipping
+              <a href="https://sillyhost.cloud" class="underline hover:text-[#352d72]" target="_blank" rel="noopener">sillyhost.cloud</a>
+            </p>
+    
+            <p class="text-[1.05rem] leading-[1.75] text-[#70647c]">Founder & Full-Stack Developer | Building SaaS & AI Products | SvelteKit, TypeScript, Cloudflare | IT @ KMITL. I ships SaaS daily with hope and dream. Making sure to milk dry my Macbook Pro M4 Pro.</p>
+            <dl class="mt-10 mb-0 border-t border-[#d9cbb8]">
+              <div class="grid grid-cols-[7rem_1fr] gap-4 border-b border-[#d9cbb8] py-4 max-md:grid-cols-[5.5rem_1fr]">
+                <dt class="text-xs font-bold tracking-[0.08em] text-[#352d72] uppercase">Name</dt><dd class="m-0 font-semibold">Phuripat Sunopak</dd>
+              </div>
+              <div class="grid grid-cols-[7rem_1fr] gap-4 border-b border-[#d9cbb8] py-4 max-md:grid-cols-[5.5rem_1fr]">
+                <dt class="text-xs font-bold tracking-[0.08em] text-[#352d72] uppercase">Setup</dt><dd class="m-0 font-semibold">Macbook Pro M4 Pro, Passion and Dream, Harness Agents</dd>
+              </div>
+              <div class="grid grid-cols-[7rem_1fr] gap-4 border-b border-[#d9cbb8] py-4 max-md:grid-cols-[5.5rem_1fr]">
+                <dt class="text-xs font-bold tracking-[0.08em] text-[#352d72] uppercase">Stack</dt><dd class="m-0 font-semibold">SvelteKit, PocketBase, Supabase, Next.js, TypeScript, More♡</dd>
+              </div>
+              <div class="grid grid-cols-[7rem_1fr] gap-4 border-b border-[#d9cbb8] py-4 max-md:grid-cols-[5.5rem_1fr]">
+                <dt class="text-xs font-bold tracking-[0.08em] text-[#352d72] uppercase">Based in</dt><dd class="m-0 font-semibold">IT-KMITL@Bangkok, Thailand. (And larp cafe)</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+
+        <!-- MacBook ritual block -->
+    </section>
+
+    <!-- Showcase : macOS windows -->
+    <section id="showcase" data-section class="scroll-mt-[4.5rem] bg-[#171326]">
+      <div class="mx-auto max-w-7xl px-6 py-[clamp(5rem,9vw,8rem)] md:px-10">
+        <div class="mb-[clamp(2.5rem,5vw,4.5rem)]">
+          <h2 class="m-0 font-[Newsreader,serif] text-[clamp(3.25rem,7vw,6rem)] leading-[0.9] tracking-[-0.035em] text-[#fff8ed]">Showcase</h2>
+          <p class="mt-3 mb-0 text-xs font-bold tracking-[0.12em] text-[#74d5c5] uppercase">Chapter two · the portfolio</p>
+        </div>
+
+        <div class="grid gap-[clamp(3rem,6vw,5rem)]">
+          <!-- maClaw -->
+          <article class="overflow-hidden rounded-2xl border border-white/20 bg-[#1e1932] shadow-[0_1.5rem_4rem_rgba(13,9,27,0.35)]">
+            <div class="flex items-center gap-2 border-b border-white/10 px-5 py-3.5" aria-hidden="true">
+              <span class="h-3 w-3 rounded-full bg-[#ff5f57]"></span><span class="h-3 w-3 rounded-full bg-[#febc2e]"></span><span class="h-3 w-3 rounded-full bg-[#28c840]"></span>
+              <span class="ml-3 truncate font-[JetBrains_Mono,monospace] text-xs text-[#8f86a3]">maclaw ~/deploy-openclaw</span>
+            </div>
+            <div class="relative bg-black">
+              <img src="assets/maclaw.png" alt="maClaw landing page: Deploy OpenClaw in one minute" width="2992" height="1798" class="aspect-[16/9] w-full object-cover object-top" loading="lazy">
+              <figure class="absolute right-3 bottom-3 m-0 w-[10.75rem] overflow-hidden rounded-xl border border-white/40 bg-white shadow-[0_0.8rem_2rem_rgba(13,9,27,0.5)] sm:w-[13rem] md:right-5 md:bottom-5 md:w-[15.5rem]">
+                <img src="assets/maclaw_stripe.png" alt="maClaw Stripe gross volume of ฿21,160.00" width="376" height="174" class="block w-full" loading="lazy">
+              </figure>
+            </div>
+            <div class="p-6 md:p-9">
+              <p class="m-0 inline-block rounded-full border border-[#74d5c5]/50 px-3 py-1 text-[0.65rem] font-bold tracking-[0.12em] text-[#74d5c5] uppercase">Featured · billed</p>
+              <h3 class="mt-4 mb-0 font-[Newsreader,serif] text-[clamp(2rem,4vw,3.2rem)] leading-[1]">maClaw</h3>
+              <p class="mt-4 mb-0 max-w-[58rem] leading-[1.7] text-[#cfc8dc]">Deploy OpenClaw in one minute. For Thai, live checkout, and a Stripe dashboard that is no longer a screenshot of ฿0. Gross volume: ฿21,160 the stealth startup grew up and started invoicing.</p>
+              <ul class="mt-6 flex list-none flex-wrap gap-2.5 p-0" aria-label="maClaw stack">
+                <li class="border border-white/30 px-3 py-2 text-xs font-bold text-[#fff9f0]">SvelteKit</li>
+                <li class="border border-white/30 px-3 py-2 text-xs font-bold text-[#fff9f0]">TypeScript</li>
+                <li class="border border-white/30 px-3 py-2 text-xs font-bold text-[#fff9f0]">Cloudflare</li>
+                <li class="border border-white/30 px-3 py-2 text-xs font-bold text-[#fff9f0]">Stripe</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- SillyHost -->
+          <article class="overflow-hidden rounded-2xl border border-white/20 bg-[#1e1932] shadow-[0_1.5rem_4rem_rgba(13,9,27,0.35)]">
+            <div class="flex items-center gap-2 border-b border-white/10 px-5 py-3.5" aria-hidden="true">
+              <span class="h-3 w-3 rounded-full bg-[#ff5f57]"></span><span class="h-3 w-3 rounded-full bg-[#febc2e]"></span><span class="h-3 w-3 rounded-full bg-[#28c840]"></span>
+              <span class="ml-3 truncate font-[JetBrains_Mono,monospace] text-xs text-[#8f86a3]">sillyhost ~/tavern-in-the-cloud</span>
+            </div>
+            <div class="relative bg-[#0b1224]">
+              <img src="assets/sillyhost.jpeg" alt="SillyHost landing page in a browser: Your SillyTavern, anywhere you go" width="1920" height="1536" class="aspect-[16/9] w-full object-cover object-center" loading="lazy">
+              <figure class="absolute right-3 bottom-3 m-0 w-[10.75rem] overflow-hidden rounded-xl border border-white/40 bg-white shadow-[0_0.8rem_2rem_rgba(13,9,27,0.5)] sm:w-[13rem] md:right-5 md:bottom-5 md:w-[15.5rem]">
+                <img src="assets/sillyhost_stripe.png" alt="SillyHost Stripe gross volume of ฿10,435.01" width="380" height="192" class="block w-full" loading="lazy">
+              </figure>
+            </div>
+            <div class="p-6 md:p-9">
+              <p class="m-0 inline-block rounded-full border border-white/25 px-3 py-1 text-[0.65rem] font-bold tracking-[0.12em] text-[#bdb5c8] uppercase">Live · sillyhost.cloud</p>
+              <h3 class="mt-4 mb-0 font-[Newsreader,serif] text-[clamp(2rem,4vw,3.2rem)] leading-[1]">SillyHost</h3>
+              <p class="mt-4 mb-0 max-w-[58rem] leading-[1.7] text-[#cfc8dc]">Your SillyTavern, anywhere you go. No Docker daemon, no VPS at 2am. just a link. Gross volume: ฿10,435.01 of "wait, people pay for this?" They do. The MacBook did that lmao.</p>
+              <ul class="mt-6 flex list-none flex-wrap gap-2.5 p-0" aria-label="SillyHost stack">
+                <li class="border border-white/30 px-3 py-2 text-xs font-bold text-[#fff9f0]">SvelteKit</li>
+                <li class="border border-white/30 px-3 py-2 text-xs font-bold text-[#fff9f0]">Cloudflare</li>
+                <li class="border border-white/30 px-3 py-2 text-xs font-bold text-[#fff9f0]">Stripe</li>
+                <li class="border border-white/30 px-3 py-2 text-xs font-bold text-[#fff9f0]">SillyTavern</li>
+              </ul>
+              <a href="https://sillyhost.cloud" target="_blank" rel="noopener noreferrer" class="mt-6 inline-flex items-center gap-2 text-[0.84rem] font-bold text-[#74d5c5] no-underline hover:underline">Visit sillyhost.cloud <span aria-hidden="true" class="inline-block h-[0.45rem] w-[0.45rem] rotate-45 border-r border-b border-current"></span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact : love letter -->
+    <section id="contact" data-section class="scroll-mt-[4.5rem] bg-[#f3e6d3] text-[#332a42]">
+      <div class="mx-auto max-w-7xl px-6 py-[clamp(5rem,9vw,8rem)] md:px-10">
+        <div class="mb-[clamp(2.5rem,5vw,4.5rem)] text-center">
+          <h2 class="m-0 font-[Newsreader,serif] text-[clamp(3.25rem,7vw,6rem)] leading-[0.9] tracking-[-0.035em]">Dear future co-founder</h2>
+          <p class="mt-3 mb-0 text-xs font-bold tracking-[0.12em] text-[#352d72] uppercase">Final chapter · a term sheet of friendship (non-binding)</p>
+        </div>
+
+        <div class="love-letter mx-auto max-w-2xl" data-love-letter>
+          <div class="relative overflow-hidden rounded-2xl border border-[#cdbda8] bg-[#e8d5b8] shadow-[0_1.5rem_4rem_rgba(69,47,65,0.25)]">
+            <div class="love-flap absolute inset-x-0 top-0 z-[3] h-1/2 origin-top bg-[#d9bfa0] transition-transform duration-500 [clip-path:polygon(0_0,100%_0,50%_100%)]"></div>
+            <div class="relative z-[2] px-6 pt-24 pb-8 text-center md:px-10">
+              <p class="m-0 text-xs font-bold tracking-[0.12em] text-[#352d72] uppercase">Sealed with synergy · Route B</p>
+              <p class="mx-auto mt-3 mb-0 max-w-md font-[Newsreader,serif] text-2xl leading-snug">"Let's circle back and open this letter. My calendar is wide open. Suspiciously open."</p>
+              <button type="button" data-letter-toggle aria-expanded="false"
+                class="mt-6 inline-flex min-h-11 items-center gap-2.5 rounded-full border border-[#332a42]/30 bg-[#171326] px-7 py-3 text-sm font-bold text-[#fff8ed] transition hover:-translate-y-0.5 hover:bg-[#352d72]">
+                <svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor" aria-hidden="true"><path d="M12 21s-7.5-4.7-10-9.3C.4 8.6 2.3 5 5.7 5c2 0 3.4 1.1 4.3 2.4h4c.9-1.3 2.3-2.4 4.3-2.4 3.4 0 5.3 3.6 3.7 6.7C19.5 16.3 12 21 12 21Z" transform="scale(0.9) translate(1.3 1)"/></svg>
+                <span data-letter-label>Open the letter</span>
+              </button>
+            </div>
+            <div data-letter-body class="love-body relative z-[1] grid max-h-0 grid-rows-[0fr] overflow-hidden transition-all duration-700">
+              <div class="min-h-0 overflow-hidden">
+                <div class="mx-4 mb-6 rounded-xl border border-[#cdbda8] bg-[#fffdf9] p-6 text-left shadow-inner md:mx-8 md:p-8">
+                  <p class="m-0 font-[Newsreader,serif] text-xl leading-relaxed">Dear future co-founder thanks for reaching the end of my route. I accept DMs, coffee chats, and unsolicited pitch feedback. Valuation of this friendship: $10M pre. Friends & family round now open.</p>
+                  <p class="mt-3 mb-0 text-right font-[Newsreader,serif] text-lg italic">phuripat, CEO (Chief Everything Officer)</p>
+                  <div class="mt-6 grid gap-3 sm:grid-cols-2">
+                    <a href="https://github.com/SICout9010" target="_blank" rel="noopener noreferrer" class="flex min-h-11 items-center gap-3 rounded-xl border border-[#332a42]/20 bg-white px-4 py-3 no-underline transition hover:-translate-y-0.5 hover:border-[#352d72] hover:shadow-lg">
+                      <svg viewBox="0 0 24 24" class="h-6 w-6 shrink-0 fill-[#171326]" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-2.15c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.35.77 1.05.77 2.12v3.15c0 .3.21.67.8.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
+                      <span><span class="block font-bold">GitHub</span><small class="text-[#70647c]">@phuri__dev</small></span>
+                    </a>
+                    <a href="https://www.instagram.com/phuri__p/" target="_blank" rel="noopener noreferrer" class="flex min-h-11 items-center gap-3 rounded-xl border border-[#332a42]/20 bg-white px-4 py-3 no-underline transition hover:-translate-y-0.5 hover:border-[#352d72] hover:shadow-lg">
+                      <svg viewBox="0 0 24 24" class="h-6 w-6 shrink-0" fill="none" stroke="#171326" stroke-width="1.8" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.3" fill="#171326" stroke="none"/></svg>
+                      <span><span class="block font-bold">Instagram</span><small class="text-[#70647c]">@phuri__p</small></span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/phuripat-sunopak-6190a21a0/" target="_blank" rel="noopener noreferrer" class="flex min-h-11 items-center gap-3 rounded-xl border border-[#332a42]/20 bg-white px-4 py-3 no-underline transition hover:-translate-y-0.5 hover:border-[#352d72] hover:shadow-lg">
+                      <svg viewBox="0 0 24 24" class="h-6 w-6 shrink-0 fill-[#0a66c2]" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.55V9h3.57v11.45Z"/></svg>
+                      <span><span class="block font-bold">LinkedIn</span><small class="text-[#70647c]">Phuripat Sunopak</small></span>
+                    </a>
+                    <a href="https://x.com/mr_phuripat" target="_blank" rel="noopener noreferrer" class="flex min-h-11 items-center gap-3 rounded-xl border border-[#332a42]/20 bg-white px-4 py-3 no-underline transition hover:-translate-y-0.5 hover:border-[#352d72] hover:shadow-lg">
+                      <svg viewBox="0 0 24 24" class="h-5 w-5 shrink-0 fill-[#171326]" aria-hidden="true"><path d="M18.9 1.15h3.68l-8.04 9.19L24 22.85h-7.41l-5.8-7.58-6.64 7.58H.47l8.6-9.83L0 1.15h7.59l5.24 6.93 6.07-6.93Zm-1.29 19.5h2.04L6.49 3.24H4.3l13.31 17.41Z"/></svg>
+                      <span><span class="block font-bold">X</span><small class="text-[#70647c]">@mrphuripat</small></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="flex justify-between gap-4 bg-[#100d1c] px-[clamp(1rem,4vw,3rem)] py-[1.4rem] text-[0.76rem] text-[#a9a0b5] max-md:flex-col">
+    <span>After Class · Route B</span><span>© <span data-year></span> phuripat</span>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,36 @@
+/* phurip.css — tokens + keyframes + love-letter open state. Layout lives in Tailwind utilities. */
+:root {
+  color-scheme: light;
+  font-family: "DM Sans", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body { margin: 0; }
+
+::selection { color: #171326; background: #74d5c5; }
+
+::-webkit-scrollbar { width: 0.72rem; }
+::-webkit-scrollbar-track { background: #171326; }
+::-webkit-scrollbar-thumb { border: 0.18rem solid #171326; border-radius: 1rem; background: #6757b7; }
+
+:focus-visible { outline: 0.2rem solid #74d5c5; outline-offset: 0.22rem; }
+
+@keyframes hero-reveal {
+  from { filter: saturate(0.7) blur(0.5rem); transform: scale(1.08); }
+  to { filter: saturate(1); transform: scale(1); }
+}
+
+@keyframes continue-pulse {
+  0%, 100% { transform: translateY(0) rotate(45deg); }
+  50% { transform: translateY(0.3rem) rotate(45deg); }
+}
+
+/* Love letter open state */
+.love-letter[data-open="true"] .love-flap { transform: rotateX(180deg); }
+.love-letter[data-open="true"] .love-body { max-height: 60rem; grid-template-rows: 1fr; }
+.love-body { max-height: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  :root { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
